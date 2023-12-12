@@ -1,0 +1,19 @@
+@import "normalize.scss";
+
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.w-full {
+  width: 100%;
+}

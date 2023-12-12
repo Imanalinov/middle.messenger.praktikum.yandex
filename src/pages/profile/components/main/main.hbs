@@ -1,0 +1,54 @@
+<div class="profile__user">
+  <div class="user__row">
+    <div class="user__title">Почта</div>
+    <div class="user__subtitle">{{ email }}</div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Логин</div>
+    <div class="user__subtitle">{{ login }}</div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Имя</div>
+    <div class="user__subtitle">{{ first_name }}</div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Фамилия</div>
+    <div class="user__subtitle">{{ second_name }}</div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Имя в чате</div>
+    <div class="user__subtitle">{{ display_name }}</div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Телефон</div>
+    <div class="user__subtitle">{{ phone }}</div>
+  </div>
+
+</div>
+
+<div class="profile__links">
+  <div class="link__item">
+    {{> Button
+      type="button"
+      label="Изменить данные"
+      buttonType="button_link fs-13 py-10"
+      id="changeData"
+    }}
+  </div>
+  <div class="link__item">
+    {{> Button
+      type="button"
+      label="Изменить пароль"
+      buttonType="button_link fs-13 py-10"
+      id="changePassword"
+    }}
+  </div>
+  <div class="link__item">
+    {{> Button
+      type="button"
+      label="Выйти"
+      buttonType="button_link fs-13 red py-10"
+      id="exit"
+    }}
+  </div>
+</div>

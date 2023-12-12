@@ -1,0 +1,82 @@
+<div class="container login__container">
+  <div class="login__wrapper">
+    <h1>Регистрация</h1>
+
+    <form>
+      <fieldset>
+        <div class="login__errors-container"></div>
+
+        <!-- Email -->
+        {{> Input
+          placeholderLabel="Email"
+          type="text"
+          label="Почта"
+          name="email"
+          autocomplete="email"
+        }}
+        <!-- Логин -->
+        {{> Input
+          placeholderLabel="Логин"
+          type="text"
+          label="Логин"
+          name="login"
+          autocomplete="username"
+        }}
+        <!-- Имя -->
+        {{> Input
+          placeholderLabel="Имя"
+          type="text"
+          label="Имя"
+          name="first_name"
+          autocomplete="name"
+        }}
+        <!-- Фамилия -->
+        {{> Input
+          placeholderLabel="Фамилия"
+          type="text"
+          label="Фамилия"
+          name="second_name"
+          autocomplete="family-name"
+        }}
+        <!-- Телефон -->
+        {{> Input
+          placeholderLabel="Телефон"
+          type="text"
+          label="Телефон"
+          name="phone"
+          autocomplete="tel"
+        }}
+        <!-- Пароль -->
+        {{> Input
+          placeholderLabel="Пароль"
+          type="password"
+          label="Пароль"
+          name="password"
+          autocomplete="new-password"
+        }}
+        <!-- Пароль (ещё раз) -->
+        {{> Input
+          placeholderLabel="Пароль (ещё раз)  "
+          type="password"
+          label="Пароль (ещё раз)"
+          name="password"
+          autocomplete="new-password"
+        }}
+      </fieldset>
+
+      <fieldset>
+        {{> Button
+          type="submit"
+          label="Зарегистрироваться"
+          id="register"
+        }}
+        {{> Button
+          type="button"
+          label="Войти?"
+          buttonType="button_link"
+          id="login"
+        }}
+      </fieldset>
+    </form>
+  </div>
+</div>

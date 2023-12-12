@@ -1,0 +1,86 @@
+@use "sass:math";
+
+$input_height: 50px;
+$input_error_height: 20px;
+$input_padding_x: 16px;
+
+.input {
+  display: inline-flex;
+  flex-direction: column;
+
+  &__wrapper {
+    padding: 0 $input_padding_x;
+    height: $input_height;
+    border-bottom: 1px solid #3369F3;
+    transition: border-bottom-width 50ms linear;
+    position: relative;
+
+    display: flex;
+    align-items: end;
+
+    background-color: whitesmoke;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  &__container {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  &__label {
+    $line_height: 15px;
+
+    font-size: 13px;
+    font-weight: 500;
+    height: $line_height;
+    line-height: $line_height;
+    color: #999999;
+
+    position: absolute;
+    top: math.div($input_height - $line_height, 2);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__field {
+    background-color: whitesmoke;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__errors {
+    margin-top: 2px;
+
+    &:not(:has(.input__error)) {
+      display: none;
+    }
+  }
+
+  &__error {
+    color: #f44336;
+    font-size: 12px;
+    padding: 0 $input_padding_x;
+    height: $input_error_height;
+  }
+}
+
+.input__field:focus + .input__label,
+.input__field:active + .input__label {
+  transform: translateY(-70%) scale(0.8);
+  transform-origin: left top;
+}
+
+.input__wrapper:has(.input__field:active, .input__field:focus) {
+  border-bottom: 2px solid #3369F3;
+}
+
+.input__field:not(:placeholder-shown) + .input__label {
+  transform: translateY(-70%) scale(0.8);
+  transform-origin: left top;
+}

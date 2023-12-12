@@ -1,0 +1,86 @@
+<form class="profile__user" id="userEditForm">
+  <div class="user__row">
+    <div class="user__title">Почта</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ email }}"
+      />
+    </div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Логин</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ login }}"
+      />
+    </div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Имя</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ first_name }}"
+        name="first_name"
+      />
+    </div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Фамилия</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ second_name }}"
+        name="second_name"
+      />
+    </div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Имя в чате</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ display_name }}"
+        name="display_name"
+      />
+    </div>
+  </div>
+  <div class="user__row">
+    <div class="user__title">Телефон</div>
+    <div class="user__subtitle">
+      <input
+        class="user__input"
+        type="text"
+        value="{{ phone }}"
+        name="phone"
+      />
+    </div>
+  </div>
+
+</form>
+
+<div class="profile__links">
+  <div class="link__item">
+    {{> Button
+      type="button"
+      label="Сохранить"
+      buttonType="w-full"
+      id="userEditSave"
+    }}
+  </div>
+  <div class="link__item">
+    {{> Button
+      type="button"
+      label="Отменить"
+      buttonType="button_link w-full red"
+      id="userEditCancel"
+    }}
+  </div>
+</div>

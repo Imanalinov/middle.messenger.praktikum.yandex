@@ -1,0 +1,40 @@
+<div class="container login__container">
+  <div class="login__wrapper">
+    <h1 class="login__header">Вход</h1>
+
+    <form class="login__form">
+      <fieldset>
+        <div class="login__errors-container"></div>
+
+        {{> Input
+          placeholderLabel="login"
+          type="text"
+          label="Логин"
+          name="login"
+          autocomplete="username"
+        }}
+        {{> Input
+          placeholderLabel="password"
+          type="password"
+          label="Пароль"
+          name="password"
+          autocomplete="current-password"
+        }}
+      </fieldset>
+
+      <fieldset>
+        {{> Button
+          type="submit"
+          label="Авторизоваться"
+          id="login"
+        }}
+        {{> Button
+          type="button"
+          label="Нет аккаунта?"
+          buttonType="button_link"
+          id="register"
+        }}
+      </fieldset>
+    </form>
+  </div>
+</div>
